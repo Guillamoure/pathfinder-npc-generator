@@ -1,0 +1,25 @@
+[
+  {
+    "name": "Dwarf",
+    "boosts": [{ "con": 2 }, { "wis": 2 }],
+    "flaws": [{ "cha": -2 }]
+  },
+  {
+    "name": "Elf",
+    "boosts": [{ "dex": 2 }, { "int": 2 }],
+    "flaws": [{ "con": -2 }]
+  },
+  {
+    "name": "Gnome",
+    "boosts": [{ "con": 2 }, { "cha": 2 }],
+    "flaws": [{ "str": -2 }]
+  },
+  { "name": "Half-Elf", "boosts": [{ "any": 2 }] },
+  { "name": "Half-Orc", "boosts": [{ "any": 2 }] },
+  {
+    "name": "Halfling",
+    "boosts": [{ "dex": 2 }, { "cha": 2 }],
+    "flaws": [{ "str": -2 }]
+  },
+  { "name": "Human", "boosts": [{ "any": 2 }] }
+]
