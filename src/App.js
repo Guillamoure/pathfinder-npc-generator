@@ -7,16 +7,22 @@ import { statSpread } from "./utils/stat-spread";
 function App() {
   const generatedAbilities = () => {
     let randomStyle = randomFromList(styles);
-    let assignedStats = statSpread(randomStyle);
+    let {
+      assignedScores: { str, dex, con, int, wis, cha },
+      choice,
+    } = statSpread(randomStyle);
 
     return (
       <>
-        <span>Str: {assignedStats.str}, </span>
-        <span>Dex: {assignedStats.dex}, </span>
-        <span>Con: {assignedStats.con}, </span>
-        <span>Int: {assignedStats.int}, </span>
-        <span>Wis: {assignedStats.wis}, </span>
-        <span>Cha: {assignedStats.cha}</span>
+        <div>
+          {randomStyle} - {choice}
+        </div>
+        <span>Str: {str}, </span>
+        <span>Dex: {dex}, </span>
+        <span>Con: {con}, </span>
+        <span>Int: {int}, </span>
+        <span>Wis: {wis}, </span>
+        <span>Cha: {cha}</span>
       </>
     );
   };

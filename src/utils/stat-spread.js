@@ -16,7 +16,7 @@ export const statSpread = (style, ancestry) => {
     return b - a;
   });
   let assignedScores = assign(sortedArray, style);
-  return assignedScores;
+  return { assignedScores, choice };
 };
 
 let abilities = (choice) => {
