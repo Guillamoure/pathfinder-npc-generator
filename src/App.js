@@ -7,8 +7,18 @@ import { statSpread } from "./utils/stat-spread";
 function App() {
   const generatedAbilities = () => {
     let randomStyle = randomFromList(styles);
-    console.log(randomStyle);
-    return statSpread(randomStyle).join(", ");
+    let assignedStats = statSpread(randomStyle);
+
+    return (
+      <>
+        <span>Str: {assignedStats.str}, </span>
+        <span>Dex: {assignedStats.dex}, </span>
+        <span>Con: {assignedStats.con}, </span>
+        <span>Int: {assignedStats.int}, </span>
+        <span>Wis: {assignedStats.wis}, </span>
+        <span>Cha: {assignedStats.cha}</span>
+      </>
+    );
   };
 
   return <p>{generatedAbilities()}</p>;

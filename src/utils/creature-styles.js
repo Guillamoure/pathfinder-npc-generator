@@ -1,9 +1,8 @@
-export const styles = [
-    "combat",
-    "magic",
-    "skillful",
-    "sneaky",
-    "charming",
-    "resiliant",
-    "wise"
-]
+export const styles = ["combat"];
+
+// "magic",
+// "skillful",
+// "sneaky",
+// "charming",
+// "resiliant",
+// "wise"

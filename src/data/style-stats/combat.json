@@ -1,0 +1,156 @@
+[
+  {
+    "weight": 15,
+    "order": [
+      { "stat": "str" },
+      { "stat": "dex" },
+      { "stat": "con" },
+      { "stat": "int" },
+      { "stat": "wis" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 14,
+    "order": [
+      { "stat": "dex" },
+      { "stat": "str" },
+      { "stat": "con" },
+      { "stat": "int" },
+      { "stat": "wis" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 13,
+    "order": [
+      { "stat": "str" },
+      { "stat": "con" },
+      { "stat": "dex" },
+      { "stat": "int" },
+      { "stat": "wis" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 13,
+    "order": [
+      { "stat": "dex" },
+      { "stat": "con" },
+      { "stat": "str" },
+      { "stat": "int" },
+      { "stat": "wis" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 15,
+    "order": [
+      { "stat": "str" },
+      { "stat": "dex" },
+      { "stat": "con" },
+      { "stat": "wis" },
+      { "stat": "int" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 14,
+    "order": [
+      { "stat": "dex" },
+      { "stat": "str" },
+      { "stat": "con" },
+      { "stat": "wis" },
+      { "stat": "int" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 13,
+    "order": [
+      { "stat": "str" },
+      { "stat": "con" },
+      { "stat": "dex" },
+      { "stat": "wis" },
+      { "stat": "int" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 13,
+    "order": [
+      { "stat": "dex" },
+      { "stat": "con" },
+      { "stat": "str" },
+      { "stat": "wis" },
+      { "stat": "int" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 4,
+    "order": [
+      { "stat": "con" },
+      { "stat": "dex" },
+      { "stat": "str" },
+      { "stat": "int" },
+      { "stat": "wis" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 4,
+    "order": [
+      { "stat": "con" },
+      { "stat": "dex" },
+      { "stat": "str" },
+      { "stat": "wis" },
+      { "stat": "int" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 2,
+    "order": [
+      { "stat": "str" },
+      { "stat": "int" },
+      { "stat": "con" },
+      { "stat": "dex" },
+      { "stat": "wis" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 2,
+    "order": [
+      { "stat": "dex" },
+      { "stat": "int" },
+      { "stat": "con" },
+      { "stat": "str" },
+      { "stat": "wis" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 2,
+    "order": [
+      { "stat": "dex" },
+      { "stat": "wis" },
+      { "stat": "con" },
+      { "stat": "str" },
+      { "stat": "int" },
+      { "stat": "cha" }
+    ]
+  },
+  {
+    "weight": 2,
+    "order": [
+      { "stat": "str" },
+      { "stat": "wis" },
+      { "stat": "con" },
+      { "stat": "dex" },
+      { "stat": "int" },
+      { "stat": "cha" }
+    ]
+  }
+]

@@ -1,4 +1,6 @@
 import { randomFromList } from "./functions";
+import combat from "../data/style-stats/combat.json";
+
 export const statSpread = (style, ancestry) => {
   let randomAbilityChoice = [
     "basicArray",
@@ -10,8 +12,11 @@ export const statSpread = (style, ancestry) => {
   ];
   let choice = randomFromList(randomAbilityChoice);
   let array = abilities(choice);
-  console.log(choice, array);
-  return array;
+  let sortedArray = array.sort(function (a, b) {
+    return b - a;
+  });
+  let assignedScores = assign(sortedArray, style);
+  return assignedScores;
 };
 
 let abilities = (choice) => {
@@ -35,7 +40,7 @@ let abilities = (choice) => {
       arr2.push(d6());
       arr2.push(d6());
       arr2.sort();
-      arr.shift();
+      arr2.shift();
       arr.push(arr2[0] + arr2[1] + arr2[2]);
     }
     return arr;
@@ -52,4 +57,38 @@ let abilities = (choice) => {
     }
     return arr;
   }
+};
+
+const assign = (array, choice) => {
+  let weight = 0;
+  let obj;
+  if (choice === "combat") {
+    obj = combat;
+  }
+  // add up total weight
+  obj.forEach((el) => {
+    weight += el.weight;
+  });
+  // select random number from weights
+  let rand = Math.ceil(Math.random() * weight);
+  // access element from weight
+  let i = 0;
+  let selectedSpread;
+  while (rand > 1 && !selectedSpread) {
+    if (rand <= obj[i].weight) {
+      selectedSpread = obj[i];
+    } else {
+      rand -= obj[i].weight;
+    }
+  }
+
+  // assign ability scores
+  let statObj = {};
+  console.log(i, selectedSpread.order, "huh?");
+  console.log(array);
+  for (let j = 0; j < 6; j++) {
+    statObj[selectedSpread.order[j].stat] = array[j];
+  }
+
+  return statObj;
 };
