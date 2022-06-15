@@ -1,0 +1,8 @@
+{
+  "fighter": {
+    "hd": 10,
+    "fortitude": "strong",
+    "reflex": "weak",
+    "will": "weak"
+  }
+}

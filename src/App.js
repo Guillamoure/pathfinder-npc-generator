@@ -1,9 +1,9 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
 import { styles } from "./utils/creature-styles";
-import { randomFromList } from "./utils/functions";
+import { randomFromList, pluser } from "./utils/functions";
 import { statSpread } from "./utils/stat-spread";
+import { classChoice } from "./utils/class-choice";
 import CreateForm from "./components/create-form";
 
 function App() {
@@ -26,6 +26,8 @@ function App() {
     dupeNPC.style = randomStyle;
     dupeNPC.choice = choice;
 
+    dupeNPC.klass = classChoice(randomStyle);
+
     dupeNPC.generated = true;
 
     setnpc(dupeNPC);
@@ -33,7 +35,16 @@ function App() {
 
   const renderNPC = () => {
     if (npc.generated) {
-      const { style, choice, str, dex, con, int, wis, cha } = npc;
+      console.log(npc);
+      const { style, choice, str, dex, con, int, wis, cha, klass, hd } = npc;
+      let bab = 1;
+      if (klass.hd === 8) {
+        bab = 0.75;
+      }
+      if (klass.hd === 6) {
+        bab = 0.5;
+      }
+      bab = Math.floor(bab * hd);
       return (
         <>
           <div>
@@ -45,6 +56,9 @@ function App() {
           <span>Int: {int}, </span>
           <span>Wis: {wis}, </span>
           <span>Cha: {cha}</span>
+          <div>
+            <strong>BAB</strong>: {pluser(bab)}
+          </div>
         </>
       );
     } else {
